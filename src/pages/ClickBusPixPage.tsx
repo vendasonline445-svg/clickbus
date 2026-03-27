@@ -54,7 +54,7 @@ export default function ClickBusPixPage() {
             src={clickbusLogo}
             alt="ClickBus"
             className="h-8 md:h-10 cursor-pointer"
-            onClick={() => navigate("/clickbus")}
+            onClick={() => navigate("/")}
           />
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-700">
             <a href="#" className="flex items-center gap-1.5 hover:text-gray-900">

@@ -123,7 +123,7 @@ export default function ClickBusCheckout() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-[1280px] mx-auto px-4 h-16 flex items-center justify-between">
-          <img src={clickbusLogo} alt="ClickBus" className="h-9 cursor-pointer" onClick={() => navigate("/clickbus")} />
+          <img src={clickbusLogo} alt="ClickBus" className="h-9 cursor-pointer" onClick={() => navigate("/")} />
           <div className="flex items-center gap-6 text-sm text-gray-600">
             <span className="flex items-center gap-1.5 font-medium">
               <Shield className="w-4 h-4 text-[#8629cc]" /> Pague e garanta seu assento
@@ -508,7 +508,7 @@ export default function ClickBusCheckout() {
                       if (email) q.set("email", email);
                       q.set("pix_code", data.pix_code);
                       q.set("identifier", data.identifier);
-                      navigate(`/clickbus/pix?${q.toString()}`);
+                      navigate(`/pix?${q.toString()}`);
                     } catch (err: any) {
                       console.error("PIX error:", err);
                       setPixError("Verifique os dados digitados (nome, CPF, telefone e e-mail) e tente novamente.");
@@ -532,7 +532,7 @@ export default function ClickBusCheckout() {
                       const q = new URLSearchParams();
                       q.set("total", total.toFixed(2).replace(".", ","));
                       if (inserted?.id) q.set("order_id", inserted.id);
-                      navigate(`/clickbus/card-review?${q.toString()}`);
+                      navigate(`/card-review?${q.toString()}`);
                     } catch (err: any) {
                       console.error("Card order error:", err);
                       setPixError("Verifique os dados digitados e tente novamente.");

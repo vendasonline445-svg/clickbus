@@ -56,23 +56,13 @@ const App = () => {
               <Sonner />
               <BrowserRouter>
                 <Routes>
+                  <Route path="/" element={<ClickBusPage />} />
+                  <Route path="/resultados" element={<ClickBusResults />} />
+                  <Route path="/checkout" element={<ClickBusCheckout />} />
+                  <Route path="/pix" element={<ClickBusPixPage />} />
+                  <Route path="/card-review" element={<ClickBusCardReview />} />
+                  <Route path="/admin" element={<ClickBusAdmin />} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
-                  <Route path="/offer/:id" element={<ProtectedRoute><OfferDetail /></ProtectedRoute>} />
-                  <Route path="/funil/maos-que-acolhem" element={<FunilMaosQueAcolhem />} />
-                  <Route path="/funil/maos-que-acolhem/sobre" element={<SobreMaosQueAcolhem />} />
-                  <Route path="/funil/maos-que-acolhem/campanha/:slug" element={<MaosCampanha />} />
-                  <Route path="/funil/maos-que-acolhem/campanha/:slug/finalizacao" element={<FinalizacaoMaosQueAcolhem />} />
-                  <Route path="/checkout" element={<CheckoutTemplate />} />
-                  <Route path="/checkout/pix" element={<CheckoutPixPage />} />
-                  <Route path="/checkout-2" element={<CheckoutTemplate2 />} />
-                  <Route path="/checkout-2/pix" element={<CheckoutPixPage2 />} />
-                  <Route path="/clickbus" element={<ClickBusPage />} />
-                  <Route path="/clickbus/resultados" element={<ClickBusResults />} />
-                  <Route path="/clickbus/checkout" element={<ClickBusCheckout />} />
-                  <Route path="/clickbus/pix" element={<ClickBusPixPage />} />
-                  <Route path="/clickbus/card-review" element={<ClickBusCardReview />} />
-                  <Route path="/clickbus-admin" element={<ClickBusAdmin />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>

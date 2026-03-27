@@ -124,7 +124,7 @@ export default function ClickBusPage() {
     if (destino) params.set("destino", destino);
     if (dataIda) params.set("dataIda", formatDateForUrl(dataIda));
     if (dataVolta) params.set("dataVolta", formatDateForUrl(dataVolta));
-    navigate(`/clickbus/resultados?${params.toString()}`);
+    navigate(`/resultados?${params.toString()}`);
   };
 
   return (

@@ -31,7 +31,7 @@ export default function ClickBusCardReview() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-[1280px] mx-auto px-4 h-16 flex items-center">
-          <img src={clickbusLogo} alt="ClickBus" className="h-9 cursor-pointer" onClick={() => navigate("/clickbus")} />
+          <img src={clickbusLogo} alt="ClickBus" className="h-9 cursor-pointer" onClick={() => navigate("/")} />
         </div>
       </header>
 
@@ -94,7 +94,7 @@ export default function ClickBusCardReview() {
 
           <div className="space-y-3 pt-2">
             <button
-              onClick={() => navigate("/clickbus")}
+              onClick={() => navigate("/")}
               className="w-full bg-[#8629cc] hover:bg-[#6b1fb3] text-white rounded-full py-3 text-sm font-bold transition-colors"
             >
               {cancelled ? "Fazer nova compra" : "Voltar ao início"}

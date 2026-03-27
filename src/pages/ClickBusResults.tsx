@@ -516,7 +516,7 @@ function TripCard({ trip, departureDate }: { trip: Trip; departureDate: string }
             sp.set("price", trip.price);
             sp.set("cents", trip.cents);
             sp.set("seats", selectedSeats.join(","));
-            navigate(`/clickbus/checkout?${sp.toString()}`);
+            navigate(`/checkout?${sp.toString()}`);
           }}
         />
       )}
@@ -593,7 +593,7 @@ export default function ClickBusResults() {
     if (destino) p.set("destino", destino);
     if (editDataIda) p.set("dataIda", editDataIda);
     if (editDataVolta) p.set("dataVolta", editDataVolta);
-    navigate(`/clickbus/resultados?${p.toString()}`);
+    navigate(`/resultados?${p.toString()}`);
     // Force reload since we're on the same route
     navigate(0);
   };
@@ -606,7 +606,7 @@ export default function ClickBusResults() {
       {/* Top bar */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-[1280px] mx-auto px-4 h-16 flex items-center gap-4">
-          <img src={clickbusLogo} alt="ClickBus" className="h-9 shrink-0 cursor-pointer" onClick={() => navigate("/clickbus")} />
+          <img src={clickbusLogo} alt="ClickBus" className="h-9 shrink-0 cursor-pointer" onClick={() => navigate("/")} />
 
           {/* Search pills */}
           <div className="hidden md:flex items-center gap-2 flex-1 overflow-visible">
